@@ -101,6 +101,18 @@ Some of the popular color spaces are RGB (Red, Green, Blue), CMYK (Cyan, Magenta
 
 BGR color space: OpenCV’s default color space is RGB. However, it actually stores color in the BGR format. It is an additive color model where the different intensities of Blue, Green and Red give different shades of color.
 
+HSV color space: It stores color information in a cylindrical representation of RGB color points. It attempts to depict the colors as perceived by the human eye. Hue value varies from 0-179, Saturation value varies from 0-255 and Value value varies from 0-255. It is mostly used for color segmentation purpose.
+
+CMYK color space: Unlike, RGB it is a subtractive color space. The CMYK model works by partially or entirely masking colors on a lighter, usually white, background. The ink reduces the light that would otherwise be reflected. Such a model is called subtractive because inks “subtract” the colors red, green and blue from white light. White light minus red leaves cyan, white light minus green leaves magenta, and white light minus blue leaves yellow.
+
+LAB color space :
+L – Represents Lightness.
+A – Color component ranging from Green to Magenta.
+B – Color component ranging from Blue to Yellow.
+
+YUV: Even though RGB is good for many purposes, it tends to be very limited for many real life applications. People started thinking about different methods to separate the intensity information from the color information. Hence, they came up with the YUV color space. Y refers to the luminance or intensity, and U/V channels represent color information. This works well in many applications because the human visual system perceives intensity information very differently from color information.
+
+
 import cv2
 image=cv2.imread("img20.jpg")
 cv2.imshow("old",image)
@@ -120,4 +132,5 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 #### OUTPUT:
+
 
