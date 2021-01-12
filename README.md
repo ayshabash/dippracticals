@@ -133,4 +133,24 @@ cv2.destroyAllWindows()
 
 #### OUTPUT:
 
+# 6.Develop a program to create an image from 2D array.
+
+NumPy Or numeric python is a popular library for array manipulation. Since images are just an array of pixels carrying various color codes. NumPy can be used to convert an array into image. Apart from NumPy we will be using PIL or Python Image Library also known as Pillow to manipulate and save arrays.
+
+Numpy zeros np.zeros() function in python is used to get an array of given shape and type filled with zeros. You can pass three parameters inside function np.zeros shape, dtype and order. Numpy zeros function returns an array of the given shape.
+
+Getting back the image from converted Numpy Array
+Image.fromarray() function helps to get back the image from converted numpy array. We get back the pixels also same after converting back and forth. Hence, this is very much efficient
+
+import numpy as np
+from PIL import Image
+import cv2 as c 
+array = np.zeros([100, 200, 3], dtype=np.uint8)
+array[:,:100] = [150, 128, 0] #Orange left side
+array[:,100:] = [0, 0, 255]   #Blue right side
+img = Image.fromarray(array)
+img.save('flower.jpg')
+img.show()
+c.waitKey(0)
+
 
