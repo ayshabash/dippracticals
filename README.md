@@ -69,5 +69,55 @@ OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/73472521/104284702-7656c800-54d8-11eb-98b8-433645de5bc1.png)
 
+### 4.Write a program to convert color image into gray scale and binary image.
 
+A binary image is the type of image where each pixel is black or white. You can also say the pixels as 0 or 1 value. Here 0 represents black and 1 represents a white pixel.
+Thresholding is used to create a binary image from a grayscale image. It is the simplest way to segment objects from a background.
+Images are composed of Pixels and in Binary image every pixel value is either 0 or 1 i.e either black or white. it is called bi-level or two level image
+while in gray scale ; image can have any value between 0 to 255 for 8-bit color(every pixel is represented by 8 bits) i.e it can have transition between pure black or pure white . It only have intensity value.
+
+So, Gray Scale image can have shades of grey varying between Black and white while Binary image can either of two extreme for a pixel value either white or black
+
+Thresholding is used to create a binary image from a grayscale image. It is the simplest way to segment objects from a background.
+
+import cv2
+image=cv2.imread("img19.jpg")
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+(tresh,blackAndWhiteImage)=cv2.threshold(gray,127,255,cv2.THRESH_BINARY)
+cv2.imshow("gray",gray)
+cv2.imshow("BINARY",blackAndWhiteImage)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+Where 127 is the threshold, 255 is the max value and cv2.THRESH_BINARY indicates binary thresholding. You can feed it cv2.THRESH_BINARY_INV instead if you need it inverted.
+
+#### OUTPUT:
+
+
+### 5.Write a program to convert color image into different color space.
+
+Color spaces are a way to represent the color channels present in the image that gives the image that particular hue. There are several different color spaces and each has its own significance.
+Some of the popular color spaces are RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSV (Hue, Saturation, Value), etc.
+
+BGR color space: OpenCV’s default color space is RGB. However, it actually stores color in the BGR format. It is an additive color model where the different intensities of Blue, Green and Red give different shades of color.
+
+import cv2
+image=cv2.imread("img20.jpg")
+cv2.imshow("old",image)
+cv2.waitKey()
+hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+cv2.imshow("HSV",hsv)
+cv2.waitKey(0)
+lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+cv2.imshow("LAB",lab)
+cv2.waitKey(0)
+hls = cv2.cvtColor(image, cv2.COLOR_BGR2HLS)
+cv2.imshow("HLS",hls)
+cv2.waitKey(0)
+yuv = cv2.cvtColor(image, cv2.COLOR_BGR2YUV)
+cv2.imshow("YUV",yuv)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+#### OUTPUT:
 
