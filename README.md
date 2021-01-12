@@ -69,7 +69,7 @@ OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/73472521/104284702-7656c800-54d8-11eb-98b8-433645de5bc1.png)
 
-### 4.Write a program to convert color image into gray scale and binary image.
+### 3.Write a program to convert color image into gray scale and binary image.
 
 A binary image is the type of image where each pixel is black or white. You can also say the pixels as 0 or 1 value. Here 0 represents black and 1 represents a white pixel.
 Thresholding is used to create a binary image from a grayscale image. It is the simplest way to segment objects from a background.
@@ -94,7 +94,7 @@ Where 127 is the threshold, 255 is the max value and cv2.THRESH_BINARY indicates
 #### OUTPUT:
 
 
-### 5.Write a program to convert color image into different color space.
+### 4.Write a program to convert color image into different color space.
 
 Color spaces are a way to represent the color channels present in the image that gives the image that particular hue. There are several different color spaces and each has its own significance.
 Some of the popular color spaces are RGB (Red, Green, Blue), CMYK (Cyan, Magenta, Yellow, Black), HSV (Hue, Saturation, Value), etc.
@@ -137,7 +137,7 @@ cv2.destroyAllWindows()
 
 
 
-# 6.Develop a program to create an image from 2D array.
+### 5.Develop a program to create an image from 2D array.
 
 NumPy Or numeric python is a popular library for array manipulation. Since images are just an array of pixels carrying various color codes. NumPy can be used to convert an array into image. Apart from NumPy we will be using PIL or Python Image Library also known as Pillow to manipulate and save arrays.
 
