@@ -133,6 +133,10 @@ cv2.destroyAllWindows()
 
 #### OUTPUT:
 
+![image](https://user-images.githubusercontent.com/73472521/104285151-317f6100-54d9-11eb-84e8-dbe3648aa530.png)
+
+
+
 # 6.Develop a program to create an image from 2D array.
 
 NumPy Or numeric python is a popular library for array manipulation. Since images are just an array of pixels carrying various color codes. NumPy can be used to convert an array into image. Apart from NumPy we will be using PIL or Python Image Library also known as Pillow to manipulate and save arrays.
@@ -152,5 +156,9 @@ img = Image.fromarray(array)
 img.save('flower.jpg')
 img.show()
 c.waitKey(0)
+
+#### OUTPUT:
+
+![image](https://user-images.githubusercontent.com/73472521/104286190-b6b74580-54da-11eb-8665-1c30e21edb2f.png)
 
 
