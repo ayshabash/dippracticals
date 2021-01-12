@@ -44,6 +44,9 @@ c.waitKey(0)
 
 OUTPUT:
 
+![image](https://user-images.githubusercontent.com/73472521/104284658-5d4e1700-54d8-11eb-9742-e9304c9bf9ef.png)
+
+
 
 Rotating an image :-
 
@@ -64,6 +67,7 @@ cv2.destroyAllWindows()
 
 OUTPUT:
 
+![image](https://user-images.githubusercontent.com/73472521/104284702-7656c800-54d8-11eb-98b8-433645de5bc1.png)
 
 
 
