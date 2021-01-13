@@ -168,6 +168,11 @@ c.waitKey(0)
 ### 5.Develop a program to display the sum and mean of set of images.
       create n number of images and read them from the directory and perform the operations.
 
+Here finding the sum and mean value of images from the list of images. 
+Firstly creating n number of images using array function and reading them from the directory.
+Then by using the for loop adding each images in the list and finding the sum of images in the list.
+Then by using previously found sum of images we have to calculate the mean value of the images.
+Mean value is found by dividing the sum of images by the count of images.
 
 import cv2
 import os
