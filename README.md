@@ -239,11 +239,13 @@ Summed neighbors matrix:
 [23. 40. 27.]
 [17. 31. 19.]]
 
-### Cpp program to overload operator(unary+)
+### Cpp program to overload operator
 
 Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type. For example, C++ provides the ability to add the variables of the user-defined data type that is applied to the built-in data types.
 
 Here we have overloaded the operator++(unary plus operator)
+
+
 
 include <iostream>    
 using namespace std;    
@@ -272,4 +274,63 @@ int main()
 ####Output:
 
 The Count is: 10
+
+#include<iostream>
+using namespace std;
+class matrix 
+{
+        int m, n, x[30][30]; 
+public:
+        matrix(int a, int b)
+       { 
+                m=a;
+                n=b;
+       }
+        matrix(){}
+        void get();
+        void put();
+        matrix operator +(matrix);
+}; 
+
+void matrix:: get()
+{  
+        cout<<"\n Enter values into the matrix";
+               for(int i=0; i<m; i++)
+                       for(int j=0; j<n;j++)
+                       cin>>x[i][j];
+
+}
+
+void matrix:: put()
+{  
+        cout<<"\n the sum of the matrix is :\n";
+               for(int i=0; i<m; i++)
+               {
+                       for(int j=0; j<n;j++)
+                       cout<<x[i][j]<<"\t";
+                       cout<<endl;
+               }
+} 
+
+matrix matrix::operator +(matrix b)
+{   
+        matrix c(m,n);
+        for(int i=0; i<m; i++)
+                for(int j=0; j<n; j++)
+                c.x[i][j]= x[i][j] + b.x[i][j];
+        return c;
+}
+
+int main()
+{    
+        int m,n;
+        cout<<"\n Enter the size of the array";
+        cin>>m>>n;
+        matrix a(m,n) , b(m,n) , c;
+        a.get();
+        b.get();
+        c= a+b;
+        c.put();
+        return 0;
+}
 
