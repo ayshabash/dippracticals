@@ -243,8 +243,7 @@ Summed neighbors matrix:
 
 Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type. For example, C++ provides the ability to add the variables of the user-defined data type that is applied to the built-in data types.
 
-Here we have overloaded the operator++(unary plus operator)
-
+#### Here we have overloaded the operator++(unary plus operator)
 
 include <iostream>    
 using namespace std;    
@@ -276,7 +275,10 @@ The Count is: 10
 
 
 
-Here we have overloaded the operator+(binary plus operator)
+#### Here we have overloaded the operator+(binary plus operator)
+
+The binary plus operator is overloaded inorder to add two matrices.
+We get the sum of two matrices as the output.
 
 #include<iostream>
 using namespace std;
