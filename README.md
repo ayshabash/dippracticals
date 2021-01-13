@@ -165,7 +165,7 @@ c.waitKey(0)
 
 ![image](https://user-images.githubusercontent.com/73472521/104286190-b6b74580-54da-11eb-8665-1c30e21edb2f.png)
 
-### 5.Develop a program to display the sum and mean of set of images.
+### 6.Develop a program to display the sum and mean of set of images.
       create n number of images and read them from the directory and perform the operations.
 
 Here finding the sum and mean value of images from the list of images. 
@@ -200,3 +200,38 @@ cv2.destroyAllWindows()
 #### OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/73472521/104420633-2cd1b000-55a0-11eb-9bbe-ad393b0ed7c5.png)
+
+### Cpp program to overload operator(unary+)
+
+Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type. For example, C++ provides the ability to add the variables of the user-defined data type that is applied to the built-in data types.
+
+Here we have overloaded the operator++(unary plus operator)
+
+include <iostream>    
+using namespace std;    
+class Test    
+{    
+   private:    
+      int num;    
+   public:    
+       Test(): num(8){}    
+       void operator ++()   //function to overload ++operator 
+      {     
+          num = num+2;     
+       }    
+       void Print() {     
+           cout<<"The Count is: "<<num;     
+       }    
+};    
+int main()    
+{    
+    Test tt;    
+    ++tt;  // calling of a function "void operator ++()"    
+    tt.Print();    
+    return 0;    
+}    
+      
+####Output:
+
+The Count is: 10
+
