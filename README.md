@@ -95,6 +95,7 @@ Where 127 is the threshold, 255 is the max value and cv2.THRESH_BINARY indicates
 
 #### OUTPUT:
 
+![image](https://user-images.githubusercontent.com/73472521/104418517-065e4580-559d-11eb-92a1-331a6673a254.png)
 
 
 ### 4.Write a program to convert color image into different color space.
