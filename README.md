@@ -246,7 +246,6 @@ Operator overloading is a compile-time polymorphism in which the operator is ove
 Here we have overloaded the operator++(unary plus operator)
 
 
-
 include <iostream>    
 using namespace std;    
 class Test    
@@ -274,6 +273,10 @@ int main()
 ####Output:
 
 The Count is: 10
+
+
+
+Here we have overloaded the operator+(binary plus operator)
 
 #include<iostream>
 using namespace std;
@@ -334,3 +337,6 @@ int main()
         return 0;
 }
 
+### OUTPUT:
+
+![image](https://user-images.githubusercontent.com/73472521/104442910-be9ae680-55bb-11eb-9284-45953bc4c395.png)
