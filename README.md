@@ -87,11 +87,14 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 cv2.imshow("gray",gray)
 cv2.imshow("BINARY",blackAndWhiteImage)
 cv2.waitKey(0)
+cv2.imwrite('graycopy.png',gray)
+cv2.imwrite('blackAndWhiteImagecopy.png',blackAndWhiteImage)
 cv2.destroyAllWindows()
 
 Where 127 is the threshold, 255 is the max value and cv2.THRESH_BINARY indicates binary thresholding. You can feed it cv2.THRESH_BINARY_INV instead if you need it inverted.
 
 #### OUTPUT:
+
 
 
 ### 4.Write a program to convert color image into different color space.
