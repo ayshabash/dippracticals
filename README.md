@@ -201,6 +201,44 @@ cv2.destroyAllWindows()
 
 ![image](https://user-images.githubusercontent.com/73472521/104420633-2cd1b000-55a0-11eb-9bbe-ad393b0ed7c5.png)
 
+### 7.Find the sum of all neighborhood values of the matrix.
+
+Here in this program we are finding the sum of all neighborhood elements of the matrix.
+For each element in the matrix, all the possible neighbor elements are added together to give the corresponding sum.
+
+import numpy as np
+M = [[1, 2, 3],
+[4, 5, 6],
+[7, 8, 9]]
+M = np.asarray(M)
+N = np.zeros(M.shape)
+def sumNeighbors(M,x,y):
+l = []
+for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range()
+for j in range(max(0,y-1),y+2):
+try:
+t = M[i][j]
+l.append(t)
+except IndexError: # if entry doesn&#39;t exist
+pass
+return sum(l)-M[x][y] # exclude the entry itself
+for i in range(M.shape[0]):
+for j in range(M.shape[1]):
+N[i][j] = sumNeighbors(M, i, j)
+print (&quot;Original matrix:\n&quot;, M)
+print (&quot;Summed neighbors matrix:\n&quot;, N)
+
+## OUTPUT:
+Original matrix:
+
+[[1 2 3]
+[4 5 6]
+[7 8 9]]
+Summed neighbors matrix:
+[[11. 19. 13.]
+[23. 40. 27.]
+[17. 31. 19.]]
+
 ### Cpp program to overload operator(unary+)
 
 Operator overloading is a compile-time polymorphism in which the operator is overloaded to provide the special meaning to the user-defined data type. Operator overloading is used to overload or redefines most of the operators available in C++. It is used to perform the operation on the user-defined data type. For example, C++ provides the ability to add the variables of the user-defined data type that is applied to the built-in data types.
