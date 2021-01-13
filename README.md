@@ -165,4 +165,29 @@ c.waitKey(0)
 
 ![image](https://user-images.githubusercontent.com/73472521/104286190-b6b74580-54da-11eb-8665-1c30e21edb2f.png)
 
+### 5.Develop a program to display the sum and mean of set of images.
+      create n number of images and read them from the directory and perform the operations.
 
+
+import cv2
+import os
+path='D:/monaco'
+imgs=[]
+dirs = os.listdir(path)
+for file in dirs :
+    fpat=path+"\\"+file
+    imgs.append(cv2.imread(fpat))
+i=0
+sum_image = []
+for sum_image in imgs:
+    read_image= imgs[i]
+    sum_image = sum_image + read_image
+    #cv2.imshow(dirs[i],imgs[i])
+    i = i +1
+cv2.imshow('sum',sum_image)
+print(sum_image)
+cv2.imshow('mean',sum_image/i)
+mean=(sum_image/i)
+print(mean)
+cv2.waitKey()
+cv2.destroyAllWindows() 
