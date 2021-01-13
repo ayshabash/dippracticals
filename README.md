@@ -191,3 +191,7 @@ mean=(sum_image/i)
 print(mean)
 cv2.waitKey()
 cv2.destroyAllWindows() 
+
+#### OUTPUT:
+
+![image](https://user-images.githubusercontent.com/73472521/104420633-2cd1b000-55a0-11eb-9bbe-ad393b0ed7c5.png)
