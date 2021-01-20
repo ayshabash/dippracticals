@@ -342,3 +342,46 @@ int main()
 ### OUTPUT:
 
 ![image](https://user-images.githubusercontent.com/73472521/104442910-be9ae680-55bb-11eb-9284-45953bc4c395.png)
+
+### 8.Converting an image into its negative form.
+
+Image negative is produced by subtracting each pixel from the maximum intensity value. e.g. for an 8-bit image, the max intensity value is 28– 1 = 255, thus each pixel is subtracted from 255 to produce the output image.
+
+Thus, the transformation function used in image negative is
+
+s = T(r) = L – 1 – r
+
+Where L-1 is the max intensity value and s, and r are the output and input pixel values respectively.
+
+For grayscale images, light areas appear dark and vice versa. For color images, colors are replaced by their complementary colors. Thus, red areas appear cyan, greens appear magenta, and blues appear yellow, and vice versa.
+
+method1
+
+import cv2
+import numpy as np
+# Load the image
+img = cv2.imread('D:/downloads/forest.jpg')
+# Check the datatype of the image
+print(img.dtype)
+# Subtract the img from max value(calculated from dtype)
+img_neg = 255 - img
+# Show the image
+cv2.imshow('negative',img_neg)
+cv2.waitKey(0)
+
+method2
+
+import cv2
+
+# Load the image
+img = cv2.imread('D:/downloads/forest.jpg')
+
+# Invert the image using cv2.bitwise_not
+img_neg = cv2.bitwise_not(img)
+
+# Show the image
+cv2.imshow('negative',img_neg)
+cv2.waitKey(0)
+
+
+![image](https://user-images.githubusercontent.com/73472521/105158044-8d7a6300-5b33-11eb-808f-646c22e5d10f.png)
