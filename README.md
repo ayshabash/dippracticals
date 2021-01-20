@@ -359,13 +359,13 @@ method1
 
 import cv2
 import numpy as np
-# Load the image
+// Load the image
 img = cv2.imread('D:/downloads/forest.jpg')
-# Check the datatype of the image
+// Check the datatype of the image
 print(img.dtype)
-# Subtract the img from max value(calculated from dtype)
+// Subtract the img from max value(calculated from dtype)
 img_neg = 255 - img
-# Show the image
+// Show the image
 cv2.imshow('negative',img_neg)
 cv2.waitKey(0)
 
@@ -373,13 +373,12 @@ method2
 
 import cv2
 
-# Load the image
 img = cv2.imread('D:/downloads/forest.jpg')
 
-# Invert the image using cv2.bitwise_not
+ //Invert the image using cv2.bitwise_not
 img_neg = cv2.bitwise_not(img)
 
-# Show the image
+ Show the image
 cv2.imshow('negative',img_neg)
 cv2.waitKey(0)
 
