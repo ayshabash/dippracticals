@@ -1,1 +1,10 @@
+from PIL import Image, ImageEnhance
+img = Image.open("b1.jpg")
+img.show()
+img=ImageEnhance.Color(img)
+# decreased contrast
+img.enhance(0.5).show()
+# increased contrast
+img.enhance(2.0).show()   
+img.enhance(3.0).show()
 
