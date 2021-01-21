@@ -33,4 +33,7 @@ cv2.imshow('Set to 0 Inverted', thresh5)
    
 # De-allocate any associated memory usage  
 if cv2.waitKey(0) & 0xff == 27:  
+
+
+![image](https://user-images.githubusercontent.com/73472521/105330251-16f36900-5bf8-11eb-923a-3e957be592d4.png)
     cv2.destroyAllWindows()   
